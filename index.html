@@ -446,15 +446,19 @@
     <script src="js/vendor/bootstrap.min.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: false,
-      });
+<script>
+  AOS.init({
+    once: false,
+    disable: function () {
+      return window.innerWidth < 768; // matiin animasi kalau mobile
+    },
+  });
 
-      window.addEventListener("load", () => {
-        AOS.refresh();
-      });
-    </script>
+  window.addEventListener("load", () => {
+    AOS.refresh();
+  });
+</script>
+
 
     <script src="js/easing.min.js"></script>
     <script src="js/hoverIntent.js"></script>
