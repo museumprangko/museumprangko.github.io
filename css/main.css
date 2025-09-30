@@ -3590,7 +3590,6 @@ html {
   justify-content: space-between;
   align-items: flex-end;
   overflow-x: hidden;
-  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -3599,12 +3598,6 @@ html {
   }
   .badut [data-aos="fade-right"] {
     transform: translateX(20px) !important;
-  }
-  .badut [data-aos="fade-up"] {
-    transform: translateY(20px) !important;
-  }
-  .badut [data-aos="fade-down"] {
-    transform: translateY(-20px) !important;
   }
 }
 
