@@ -3621,6 +3621,22 @@ html {
   overflow: hidden; /* cegah animasi keluar frame */
 }
 
+[data-aos="fade-right"],
+[data-aos="fade-left"],
+[data-aos="fade-up"],
+[data-aos="fade-down"] {
+  transform: none; /* reset posisi awal */
+}
+
+@media (max-width: 768px) {
+  /* khusus mobile, matiin animasi AOS biar nggak bikin space */
+  [data-aos] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
 .pila-img {
   width: 200px;
   margin-bottom: -67px;
