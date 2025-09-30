@@ -56,6 +56,9 @@ body {
   font-weight: 300;
   line-height: 1.625em;
   position: relative;
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
 }
 
 ol,
@@ -3382,7 +3385,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .gradient-button {
@@ -3589,6 +3594,22 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+/* Override global AOS translate biar ga bikin space */
+@media (max-width: 768px) {
+  [data-aos="fade-left"] {
+    transform: translateX(-20px) !important; /* default -100px */
+  }
+  [data-aos="fade-right"] {
+    transform: translateX(20px) !important;  /* default 100px */
+  }
+  [data-aos="fade-up"] {
+    transform: translateY(20px) !important;  /* default 100px */
+  }
+  [data-aos="fade-down"] {
+    transform: translateY(-20px) !important;
+  }
 }
 
 /* Keyframes bounce */
