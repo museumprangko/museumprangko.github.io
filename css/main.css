@@ -3383,7 +3383,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 .gradient-button {
@@ -3590,6 +3589,23 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  overflow: hidden !important;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .badut [data-aos="fade-left"] {
+    transform: translateX(-20px) !important;
+  }
+  .badut [data-aos="fade-right"] {
+    transform: translateX(20px) !important;
+  }
+  .badut [data-aos="fade-up"] {
+    transform: translateY(20px) !important;
+  }
+  .badut [data-aos="fade-down"] {
+    transform: translateY(-20px) !important;
+  }
 }
 
 /* Keyframes bounce */
@@ -3616,26 +3632,6 @@ html {
 [data-aos="bounce-in"].aos-animate {
   animation: bounceIn 1s forwards;
 }
-
-[data-aos] {
-  overflow: hidden; /* cegah animasi keluar frame */
-}
-
-[data-aos="fade-right"],
-[data-aos="fade-left"],
-[data-aos="fade-up"],
-[data-aos="fade-down"] {
-  transform: none; /* reset posisi awal */
-}
-
-@media (max-width: 768px) {
-  /* khusus mobile, matiin animasi AOS biar nggak bikin space */
-  [data-aos] {
-    transform: none !important;
-    opacity: 1 !important;
-  }
-}
-
 
 .pila-img {
   width: 200px;
