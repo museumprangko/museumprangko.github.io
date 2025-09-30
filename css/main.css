@@ -3383,6 +3383,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .gradient-button {
@@ -3614,6 +3615,10 @@ html {
 
 [data-aos="bounce-in"].aos-animate {
   animation: bounceIn 1s forwards;
+}
+
+[data-aos] {
+  overflow: hidden; /* cegah animasi keluar frame */
 }
 
 .pila-img {
