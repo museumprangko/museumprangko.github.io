@@ -3589,7 +3589,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
