@@ -3591,15 +3591,6 @@ html {
   align-items: flex-end;
 }
 
-@media (max-width: 768px) {
-  .badut [data-aos="fade-left"] {
-    transform: translateX(-20px) !important;
-  }
-  .badut [data-aos="fade-right"] {
-    transform: translateX(20px) !important;
-  }
-}
-
 /* Keyframes bounce */
 @keyframes bounceIn {
   0% {
